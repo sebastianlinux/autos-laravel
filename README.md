@@ -121,6 +121,7 @@ Este proyecto incluye documentación interactiva de la API utilizando L5-Swagger
     Abre tu navegador y visita la siguiente URL:
 
     ```
+    https://autos-laravel-production.up.railway.app/api/documentation
     http://localhost:8000/api/documentation
     ```
 
