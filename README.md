@@ -34,7 +34,7 @@ Este proyecto ha sido desarrollado utilizando las siguientes tecnologías princi
 
 *   **PHP 8.2 o superior:** El lenguaje de programación en el que está escrito Laravel. La versión 8.2 (o superior) ofrece mejoras de rendimiento y nuevas características en comparación con versiones anteriores, lo que se traduce en una mayor eficiencia y capacidad de la aplicación.
 
-*   **Base de datos:** (Especifica la base de datos utilizada, ej: MySQL, PostgreSQL, SQLite). El sistema que almacena los datos de tu aplicación de forma organizada y segura, permitiendo el acceso y la gestión eficiente de la información.
+*   **Base de datos:** Mysql en amazon en el env encontrarás la conexión
 
 ### Frontend
 
