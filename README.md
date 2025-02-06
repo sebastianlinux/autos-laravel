@@ -1,7 +1,7 @@
 # API Carros Laravel magicLog
 
 ## Descripción del Proyecto
-
+VER PROYECTO: https://autos-laravel-production.up.railway.app
 Este proyecto es una aplicación web para la gestión de vehículos. Permite a los usuarios registrar, consultar, editar y eliminar información sobre vehículos, incluyendo marca, modelo, año, color y precio. La aplicación ofrece funcionalidades de búsqueda y filtrado para facilitar la localización de vehículos específicos.
 
 [![Captura-de-pantalla-2025-02-06-a-la-s-4-17-28-p-m.png](https://i.postimg.cc/Nfb7rKXt/Captura-de-pantalla-2025-02-06-a-la-s-4-17-28-p-m.png)](https://postimg.cc/GH8sWhzg)
