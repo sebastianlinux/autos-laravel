@@ -23,9 +23,21 @@ export default function Show({ auth, carro }: Props) {
                         <div className="p-6 text-gray-900">
                             <div className="md:flex md:items-start md:space-x-6">
                                 <div className="md:w-1/2">
-                                    {/*imagen del carro aquí */}
-                                    <div className="bg-gray-200 h-48 w-full rounded-md">
-                                        {/* Imagen del carro */}
+                                    {carro.photo_url}
+                                    <div className="relative h-48 w-full rounded-md overflow-hidden">  
+                                        {carro.photo_url ? (
+                                            <img
+                                                src={`/storage/${carro.photo_url}`} 
+                                                alt={`${carro.marca} ${carro.modelo}`}
+                                                className="object-cover w-full h-full" 
+                                            />
+                                        ) : (
+                                            <div className="bg-gray-200 h-full w-full flex items-center justify-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-16 h-16 text-gray-500">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.548 3.376 2.583 3.376h14.02c2.036 0 3.419-1.876 2.583-3.376L12 9z" />
+                                                </svg>
+                                            </div>
+                                        )}
                                     </div>
                                 </div>
 
@@ -45,16 +57,13 @@ export default function Show({ auth, carro }: Props) {
                                             <strong>Precio:</strong> {carro.precio}
                                         </p>
                                     </div>
-
-                                    {/* Otros detalles del carro */}
-                                    {/* ... */}
                                 </div>
                             </div>
 
                             <div className="mt-6">
                                 <Link
                                     href={route('carros.index')}
-                                    className="btn btn-secondary"
+                                    className="inline-block bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded" // Estilos para el botón
                                 >
                                     Volver al Listado
                                 </Link>

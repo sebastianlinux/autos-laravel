@@ -23,6 +23,7 @@ export interface Carro {
     año: number;
     color: string;
     precio: number;
+    photo_url?:string;
     created_at?: string;
     updated_at?: string;
 }

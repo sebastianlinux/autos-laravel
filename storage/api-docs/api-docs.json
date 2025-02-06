@@ -1,0 +1,175 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API de Carros",
+        "description": "Documentación de la API para la gestión de carros",
+        "version": "1.0"
+    },
+    "paths": {
+        "/api/carros": {
+            "get": {
+                "operationId": "41e670ad19f55d438451de983453db73",
+                "parameters": [
+                    {
+                        "name": "marca",
+                        "in": "query",
+                        "description": "Filtrar por marca",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "modelo",
+                        "in": "query",
+                        "description": "Filtrar por modelo",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Lista de carros",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Carro"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "operationId": "01de7b9819b262f6f15bda0ab633b422",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Carro"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Carro creado"
+                    }
+                }
+            }
+        },
+        "/api/carros/{carro}": {
+            "get": {
+                "operationId": "922df5392955c8e5e27d1a1f56d6d79f",
+                "parameters": [
+                    {
+                        "name": "carro",
+                        "in": "path",
+                        "description": "ID del carro",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Información del carro",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Carro"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "operationId": "d54b4af00b2c55aa79ad5ef64eca3da8",
+                "parameters": [
+                    {
+                        "name": "carro",
+                        "in": "path",
+                        "description": "ID del carro",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Carro"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Carro actualizado"
+                    }
+                }
+            },
+            "delete": {
+                "operationId": "3bec41dbc52589ceabee6e4dd27109ef",
+                "parameters": [
+                    {
+                        "name": "carro",
+                        "in": "path",
+                        "description": "ID del carro",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Carro eliminado"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Carro": {
+                "properties": {
+                    "marca": {
+                        "description": "Marca del carro",
+                        "type": "string"
+                    },
+                    "modelo": {
+                        "description": "Modelo del carro",
+                        "type": "string"
+                    },
+                    "año": {
+                        "description": "Año del carro",
+                        "type": "integer"
+                    },
+                    "color": {
+                        "description": "Color del carro",
+                        "type": "string"
+                    },
+                    "precio": {
+                        "description": "Precio del carro",
+                        "type": "number",
+                        "format": "float"
+                    },
+                    "photo_url": {
+                        "description": "URL de la foto del carro",
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "type": "object"
+            }
+        }
+    }
+}

@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('año');
             $table->string('color');
             $table->decimal('precio', 10, 2);
+            $table->string('photo_url')->nullable(); // Añade esta línea
             $table->timestamps();
         });
     }

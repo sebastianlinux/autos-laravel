@@ -14,7 +14,7 @@ interface Props extends PageProps {
 }
 
 export default function Edit({ auth, carro, errors }: Props) {
-    const { data, setData, put, processing } = useForm<Carro | any>({
+    const { data, setData, put, processing } = useForm<Carro | any>({
         marca: carro.marca,
         modelo: carro.modelo,
         año: carro.año,

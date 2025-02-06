@@ -12,5 +12,6 @@ class Carro extends Model
         'año',
         'color',
         'precio',
+        'photo_url'
     ];
 }
